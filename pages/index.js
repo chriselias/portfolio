@@ -8,6 +8,7 @@ import formatDate from '@/lib/utils/formatDate'
 import NewsletterForm from '@/components/NewsletterForm'
 import SectionContainer from '@/components/SectionContainer'
 import Hero from '@/components/Hero'
+import RecentWorkImages from '@/components/RecentWork'
 
 const MAX_DISPLAY = 5
 
@@ -23,7 +24,7 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="">
         <Hero />
-        <div className="bg-gray-50">
+        <div className="bg-gray-50 dark:bg-slate-900">
           <SectionContainer>
             <div className="grid grid-cols-2 gap-8 py-8">
               <div>
@@ -77,70 +78,30 @@ export default function Home({ posts }) {
         </div>
         <SectionContainer>
           <div className="grid grid-cols-2 gap-8">
-            <h2 className="text-lg font-bold">Recent Work</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, magna non rhoncus
-              lacinia, metus turpis dictum diam, a porttitor sapien diam venenatis purus. Sed et
-              nisi non tellus lacinia hendrerit a laoreet risus. Interdum et malesuada fames ac ante
-              ipsum primis in faucibus. Pellentesque pretium felis eu massa dignissim, sit amet
-              pretium urna viverra. Fusce elementum commodo magna pulvinar pretium. Fusce porttitor
-              eros a metus vehicula,
-            </p>
+            <div>
+              <h2 className="text-lg font-bold">Recent Work</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, magna non
+                rhoncus lacinia, metus turpis dictum diam, a porttitor sapien diam venenatis purus.
+                Sed et nisi non tellus lacinia hendrerit a laoreet risus. Interdum et malesuada
+                fames ac ante ipsum primis in faucibus. Pellentesque pretium felis eu massa
+                dignissim, sit amet pretium urna viverra. Fusce elementum commodo magna pulvinar
+                pretium. Fusce porttitor eros a metus vehicula,
+              </p>
+            </div>
           </div>
+          <RecentWorkImages numOfProjects={3} />
         </SectionContainer>
-        {/* <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <li key={slug} className="py-12">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul> */}
+        <div className="flex justify-center">
+          <button
+            type="button"
+            className="inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            See More Projects
+          </button>
+        </div>
       </div>
-      {posts.length > MAX_DISPLAY && (
+      {/* {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
@@ -150,12 +111,12 @@ export default function Home({ posts }) {
             All Posts &rarr;
           </Link>
         </div>
-      )}
-      {siteMetadata.newsletter.provider !== '' && (
+      )} */}
+      {/* {siteMetadata.newsletter.provider !== '' && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
-      )}
+      )} */}
     </>
   )
 }
