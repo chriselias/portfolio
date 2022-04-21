@@ -9,18 +9,13 @@ import StackIcons from '@/components/StackIcons'
 
 export const getStaticPaths = async () => {
   const p = projectsData.map(({ slug }) => ({ params: { slug } }))
-  console.log('p', p)
   return {
     paths: p,
-    fallback: true, // false or 'blocking'
+    fallback: false, // false or 'blocking'
   }
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log('params', params.slug)
-  //const projects = projectsData.filter((project) => project.slug === 'the-time-machine')
-
-  console.log(params)
   return {
     props: {
       project: projectsData.filter((project) => project.slug === params.slug),
@@ -31,7 +26,6 @@ export const getStaticProps = async ({ params }) => {
 export default function Project({ project }) {
   const { title, description, imgSrc, href, stack, excerpt } = project[0]
 
-  console.log(project)
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -53,7 +47,7 @@ export default function Project({ project }) {
         </SectionContainer>
       </div>
       <div className="h-24 border-y bg-gray-100">
-        <div className="ml-8 flex p-8">
+        <div className="ml-8 p-8">
           <StackIcons stack={stack} />
         </div>
       </div>

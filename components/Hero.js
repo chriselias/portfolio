@@ -10,7 +10,7 @@ export default function Hero() {
           <h2 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Chris Elias.
           </h2>
-          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h2 className="bg-gradient-to-r from-cyan-500 via-yellow-500 to-yellow-500 bg-clip-text text-2xl font-extrabold leading-9 tracking-tight text-transparent dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Full Stack Web Developer.
           </h2>
           <p className="my-8">
