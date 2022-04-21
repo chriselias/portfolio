@@ -3,6 +3,7 @@ import SectionContainer from '@/components/SectionContainer'
 import projectsData from '@/data/projectsData'
 import Link from './Link'
 import { SiTypescript, SiJavascript, SiReact, SiAngular } from 'react-icons/si'
+import StackIcons from '@/components/StackIcons'
 export default function RecentWorkImages({ numOfProjects }) {
   return (
     <div className="space-y-2 pt-6 pb-8 md:space-y-5">
@@ -28,11 +29,9 @@ export default function RecentWorkImages({ numOfProjects }) {
                     </div>
                     <div className="mt-6  px-2">
                       <p className="font-bold">{project.title}</p>
-                      <p className="text-sm">{project.description}</p>
+                      <p className="text-sm">{project.excerpt}</p>
                       <div className="flex flex-row flex-wrap py-4">
-                        <SiAngular className="mr-3 h-6 w-6 text-gray-300 hover:text-red-700" />
-                        <SiJavascript className="mr-3 h-6 w-6 text-gray-300" />
-                        <SiReact className="mr-3 h-6 w-6 text-gray-300" />
+                        <StackIcons stack={project.stack} />
                       </div>
                     </div>
                   </>
