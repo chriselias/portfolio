@@ -24,7 +24,7 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="">
         <Hero />
-        <div className="border-t border-b border-slate-200 bg-slate-50 dark:bg-slate-900">
+        <div className="border-t border-b">
           <SectionContainer>
             <div className="grid gap-12 py-24 lg:grid-cols-2">
               <div>
