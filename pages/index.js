@@ -24,71 +24,46 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="">
         <Hero />
-        <div className="bg-gray-50 dark:bg-slate-900">
+        <div className="border-t border-b border-slate-200 bg-slate-50 dark:bg-slate-900">
           <SectionContainer>
-            <div className="grid grid-cols-2 gap-8 py-8">
+            <div className="grid gap-12 py-24 lg:grid-cols-2">
               <div>
-                <h2 className="text-lg font-bold">Code and Design</h2>
+                <h2 className="mb-2 text-4xl font-bold">An Experienced Dev</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, magna non
-                  rhoncus lacinia, metus turpis dictum diam, a porttitor sapien diam venenatis
-                  purus. Sed et nisi non tellus lacinia hendrerit a laoreet risus. Interdum et
-                  malesuada fames ac ante ipsum primis in faucibus. Pellentesque pretium felis eu
-                  massa dignissim, sit amet pretium urna viverra. Fusce elementum commodo magna
-                  pulvinar pretium. Fusce porttitor eros a metus vehicula, luctus maximus felis
-                  venenatis. Phasellus viverra vel enim interdum tempor. Praesent ornare interdum
-                  congue. Cras ornare erat at vulputate sodales. Nullam accumsan dui sit amet leo
-                  sodales placerat. Aliquam gravida euismod est, eget volutpat sem sollicitudin vel.
-                  Nullam fringilla tellus sit amet vestibulum feugiat. Pellentesque maximus dolor at
-                  quam congue iaculis. Nulla eu dignissim neque. Mauris ac commodo mauris. In in
-                  elementum lectus.
+                  With many years of experience under my belt, I've worked with many front end and
+                  back end languages. I have managed both dev and design teams and have been a
+                  leader helping grow small companies to large.
                 </p>
               </div>
-              <div>
-                <h3 className="text-lg font-bold">Front End</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, magna non
-                  rhoncus lacinia, metus turpis dictum diam, a porttitor sapien diam venenatis
-                  purus. Sed et nisi non tellus lacinia hendrerit a laoreet risus. Interdum et
-                  malesuada fames ac ante ipsum primis in faucibus. Pellentesque pretium felis eu
-                  massa dignissim, sit amet pretium urna viverra. Fusce elementum commodo magna
-                  pulvinar pretium. Fusce porttitor eros a metus vehicula,
-                </p>
-                <h3 className="text-lg font-bold">Front End</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, magna non
-                  rhoncus lacinia, metus turpis dictum diam, a porttitor sapien diam venenatis
-                  purus. Sed et nisi non tellus lacinia hendrerit a laoreet risus. Interdum et
-                  malesuada fames ac ante ipsum primis in faucibus. Pellentesque pretium felis eu
-                  massa dignissim, sit amet pretium urna viverra. Fusce elementum commodo magna
-                  pulvinar pretium. Fusce porttitor eros a metus vehicula,
-                </p>
-                <h3 className="text-lg font-bold">Front End</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, magna non
-                  rhoncus lacinia, metus turpis dictum diam, a porttitor sapien diam venenatis
-                  purus. Sed et nisi non tellus lacinia hendrerit a laoreet risus. Interdum et
-                  malesuada fames ac ante ipsum primis in faucibus. Pellentesque pretium felis eu
-                  massa dignissim, sit amet pretium urna viverra. Fusce elementum commodo magna
-                  pulvinar pretium. Fusce porttitor eros a metus vehicula,
-                </p>
+              <div className="grid md:grid-cols-3 lg:grid-cols-1">
+                <div className="mb-10">
+                  <h3 className="text-lg font-bold">Front-End</h3>
+                  <p>
+                    Currently coding with React, Next.js, and TypeScript. I love these modern JS
+                    libaries but I have years of experience with CSS, HTML, and Angular.
+                  </p>
+                </div>
+                <div className="mb-10">
+                  <h3 className="text-lg font-bold">Back End</h3>
+                  <p>
+                    Experience with NodeJS, ExpressJS, PosgresSQL, MongoDB, and more. I enjoy
+                    writing APIs from scratch and integrating them the front-end.
+                  </p>
+                </div>
+                <div className="">
+                  <h3 className="text-lg font-bold">UI Design</h3>
+                  <p>
+                    Designing in Figma or Sketch and then translating into code is one of favorite
+                    parts of being a full stack developer.
+                  </p>
+                </div>
               </div>
             </div>
           </SectionContainer>
         </div>
         <SectionContainer>
-          <div className="grid grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-lg font-bold">Recent Work</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, magna non
-                rhoncus lacinia, metus turpis dictum diam, a porttitor sapien diam venenatis purus.
-                Sed et nisi non tellus lacinia hendrerit a laoreet risus. Interdum et malesuada
-                fames ac ante ipsum primis in faucibus. Pellentesque pretium felis eu massa
-                dignissim, sit amet pretium urna viverra. Fusce elementum commodo magna pulvinar
-                pretium. Fusce porttitor eros a metus vehicula,
-              </p>
-            </div>
+          <div className="mt-24 text-center">
+            <h2 className="my-8 text-4xl font-bold">Recent Work</h2>
           </div>
           <RecentWorkImages numOfProjects={3} />
         </SectionContainer>

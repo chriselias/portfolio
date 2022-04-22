@@ -11,11 +11,11 @@ const siteMetadata = {
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'chris@chriselias.com',
-  github: 'https://github.com',
+  github: 'https://github.com/chriselias',
   twitter: 'https://twitter.com/chriselias',
   facebook: '',
   youtube: '',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/chriselias',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

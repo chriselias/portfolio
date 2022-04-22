@@ -9,7 +9,7 @@ export default function RecentWorkImages({ numOfProjects }) {
     <div className="space-y-2 pt-6 pb-8 md:space-y-5">
       <ul
         role="list"
-        className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8"
+        className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8"
       >
         {projectsData.map(
           (project, index) =>
