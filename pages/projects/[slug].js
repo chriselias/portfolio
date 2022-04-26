@@ -24,35 +24,37 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function Project({ project }) {
-  const { title, description, imgSrc, href, stack, excerpt } = project[0]
-
+  const { title, description, imgSrc, href, stack, excerpt, colors } = project[0]
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div className=" bg-gray-50">
+      <div style={{ backgroundColor: colors.background }}>
         <SectionContainer>
           <div className="grid lg:grid-cols-2">
             <div className="flex items-center">
               <div className="p-8 md:px-8">
-                <h1 className="mb-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+                <h1
+                  style={{ color: colors.primary }}
+                  className="mb-5 text-3xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+                >
                   {title}
                 </h1>
                 <p> {excerpt}</p>
               </div>
             </div>
             <div className="p-8">
-              <Image src={imgSrc} alt={title} width={500} height={300} />
+              <Image src={imgSrc} alt={title} width={507} height={370} />
             </div>
           </div>
         </SectionContainer>
       </div>
-      <div className="h-24 border-y bg-gray-100">
-        <div className="ml-8 p-8">
+      <div className="h-24" style={{ backgroundColor: colors.primary }}>
+        <div className="ml-8 flex p-8">
           <StackIcons stack={stack} />
         </div>
       </div>
       <SectionContainer>
-        <div className="grid lg:grid-cols-2">
+        <div className="grid min-h-screen lg:grid-cols-2">
           <div className="p-8">
             <h2 className="text-lg font-semibold">About {title}</h2>
             <p>{description}</p>

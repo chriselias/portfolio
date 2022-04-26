@@ -10,7 +10,7 @@ export default function Projects() {
     <SectionContainer>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className="pt-16 pb-12">
-        <h1 className="text-center text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <h1 className="text-center text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:leading-14">
           Some Projects I've Built
         </h1>
       </div>

@@ -7,10 +7,10 @@ export default function Hero() {
       <div className="grid grid-cols-2 items-center space-y-2 pt-6 pb-8 md:space-y-5">
         <div>
           {/* <span className="mb-4 flex">Hello </span> */}
-          <h2 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-7xl md:leading-14">
+          <h2 className="mb-4 bg-gradient-to-r from-cyan-500 via-yellow-500 to-pink-500 bg-clip-text text-3xl  font-extrabold leading-9 tracking-tight text-transparent  dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-8xl ">
             Chris Elias
           </h2>
-          <h2 className="bg-gradient-to-r from-cyan-500 via-yellow-500 to-yellow-500 bg-clip-text text-2xl font-extrabold leading-9 tracking-tight text-transparent dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900  dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Full Stack Web Developer
           </h2>
           <p className="my-12 text-lg">
