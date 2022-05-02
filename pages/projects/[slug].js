@@ -32,9 +32,9 @@ export default function Project({ project }) {
         style={{ backgroundColor: colors.background, borderBottom: `10px solid ${colors.primary}` }}
       >
         <SectionContainer>
-          <div className="grid py-12 lg:grid-cols-2">
+          <div className="grid py-12 dark:text-gray-900 lg:grid-cols-2">
             <div className="flex items-center">
-              <div className="p-8 md:px-8">
+              <div className="p-8 px-2 md:px-8">
                 <Link href="/projects">
                   <button className="mb-8 flex items-center text-sm font-bold uppercase hover:text-blue-700">
                     <MdOutlineKeyboardBackspace className="mr-2" /> All Projects
@@ -53,7 +53,7 @@ export default function Project({ project }) {
             </div>
             <div className="mt-8">
               <p className="mb-8 text-sm font-bold uppercase">Built With </p>
-              <div className="mt-4 grid grid-cols-2 gap-6">
+              <div className="mt-4 grid grid-cols-2 gap-6 ">
                 {stack.map((stack) => (
                   <div className="flex" key={stack}>
                     <StackIcons stack={stack} color={colors.primary} />

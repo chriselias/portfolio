@@ -97,7 +97,7 @@ const projectsData = [
     imgSrc: '/static/images/review-generation-logo.png',
     href: '/projects/review-generation',
     slug: 'review-generation',
-    stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Styled Components'],
+    stack: ['React', 'Node.js', 'Styled Components'],
     colors: {
       background: '#edfaff',
       primary: '#3b5a99',

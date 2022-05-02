@@ -6,7 +6,7 @@ export default function Hero() {
     <SectionContainer>
       <div className="max-w-3xl py-24">
         {/* <span className="mb-4 flex">Hello </span> */}
-        <h2 className="bg-gradient-to-r from-cyan-500 via-yellow-500 to-pink-500 bg-clip-text text-3xl font-extrabold  leading-9 tracking-tight text-transparent dark:text-gray-100  sm:text-4xl sm:leading-10 md:mb-4 md:text-8xl ">
+        <h2 className="bg-gradient-to-r from-cyan-500 via-yellow-500 to-pink-500 bg-clip-text text-5xl font-extrabold  leading-9 tracking-tight text-transparent dark:text-transparent sm:leading-10 md:mb-4 md:text-8xl ">
           Chris Elias
         </h2>
         <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900  dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
