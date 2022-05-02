@@ -1,30 +1,60 @@
 const projectsData = [
   {
+    title: 'Goldn',
+    excerpt: 'Custom online marketing and reputation tools for the Assisted Living Industry.',
+    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
+    to the desired date and press "Go". No more worrying about lost keys or
+    forgotten headphones with this simple yet affordable solution.`,
+    imgSrc: '/static/images/goldn-logo.png',
+    href: 'https://getgoldn.com',
+    slug: 'goldn',
+    stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Styled Components'],
+    colors: {
+      background: '#432764',
+      primary: '#b08854',
+    },
+    screenshots: [
+      {
+        src: '/static/images/kwix.png',
+        description: 'Homepage',
+      },
+      {
+        src: '/static/images/kwix.png',
+        description: 'Homepage',
+      },
+      {
+        src: '/static/images/kwix.png',
+        description: 'Homepage',
+      },
+    ],
+  },
+  {
     title: 'Ohla',
     excerpt:
       'Website widgets for the modern web. Update your website from your phone instantly. Post news, updates, and more.',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    
-    
+    description: `A SAAS web app I'm currently developing with Next.js and Supabase. Ohla will allow users to add banners and other widgets to their websites which they can easily update from a simple online dashboard or mobile device.
     `,
-    imgSrc: '/static/images/ohla.png',
-    href: '/projects/project-1',
-    slug: 'project-1',
-    stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'TailwindCSS'],
+    imgSrc: '/static/images/ohla-logo.png',
+    href: '/projects/ohla',
+    slug: 'ohla',
+    stack: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'],
     colors: {
-      background: '#fffff2',
-      primary: '#ff7648',
+      background: '#ffffff',
+      primary: '#7c2cbc',
     },
+    screenshots: [
+      {
+        src: '/static/images/coming-soon.png',
+        description: 'Coming Soon',
+      },
+    ],
   },
   {
     title: 'Kwix',
     excerpt:
       'Website marketing service for local small businesses. Custom websites, SEO, and online ads.',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go".`,
-    imgSrc: '/static/images/kwix.png',
+    description: `Kwix is a website marketing service for local small businesses. I developed Kwix to help small businesses promote their products and services online. Kwix also provides a custom website builder and SEO services.`,
+    imgSrc: '/static/images/kwix-logo.png',
     href: '/projects/project-2',
     slug: 'project-2',
     stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Styled Components'],
@@ -32,43 +62,39 @@ const projectsData = [
       background: '#fafbff',
       primary: '#4186de',
     },
+    screenshots: [
+      {
+        src: '/static/images/coming-soon.png',
+        description: 'Homepage',
+      },
+    ],
   },
-  {
-    title: 'Goldn',
-    excerpt: 'Custom online marketing and reputation tools for the Assisted Living Industry.',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/goldn.png',
-    href: '/projects/project-3',
-    slug: 'project-3',
-    stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Styled Components'],
-    colors: {
-      background: '#432764',
-      primary: '#b08854',
-    },
-  },
+
   {
     title: 'Devlinks',
     excerpt: 'A simple and easy way for devs to save and share links.',
     description: `Devlinks.io is a web app made with NodeJS, Express, MongoDB, and Pug. I wanted to make an app that allowed developers to save and share links. Users can register new accounts to submit new links and vote up existing links. All links are searchable and registered users can save links to read later.`,
-    imgSrc: '/static/images/devlinks.png',
+    imgSrc: '/static/images/devlinks-logo.png',
     href: '/projects/devlinks',
     slug: 'devlinks',
-    stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Styled Components'],
+    stack: ['Express', 'Node.js', 'MongoDB'],
     colors: {
-      background: '#121728',
+      background: '#E8EDFF',
       primary: '#e42b5c',
     },
+    screenshots: [
+      {
+        src: '/static/images/devlinks.png',
+        description: 'Homepage',
+      },
+    ],
   },
   {
     title: 'Review Generation',
     excerpt:
       'Tools for small business to generate reviews for their products and services. Send emails and text message from a custom dashboard.',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/review-generation.png',
+    description: `A landing page for small business to generate reviews for their products and services. I developed a custom landing page for small business to generate reviews for their products and services. The landing page is a custom dashboard that allows users to send emails and text message from a custom dashboard.`,
+    imgSrc: '/static/images/review-generation-logo.png',
     href: '/projects/review-generation',
     slug: 'review-generation',
     stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Styled Components'],
@@ -76,6 +102,16 @@ const projectsData = [
       background: '#edfaff',
       primary: '#3b5a99',
     },
+    screenshots: [
+      {
+        src: '/static/images/review-generation.png',
+        description: 'Homepage',
+      },
+      {
+        src: '/static/images/review-generation-02.png',
+        description: 'Homepage',
+      },
+    ],
   },
   {
     title: 'Think Like a Professor',
@@ -83,8 +119,8 @@ const projectsData = [
     description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/think-like-a-professor.png',
-    href: '/projects/think-like-a-professor',
+    imgSrc: '/static/images/tlap-logo.png',
+    href: 'https://thinklikeaprofessor.com',
     slug: 'think-like-a-professor',
     stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Styled Components'],
 
@@ -92,6 +128,20 @@ const projectsData = [
       background: '#d7fff9',
       primary: '#37baa8',
     },
+    screenshots: [
+      {
+        src: '/static/images/kwix.png',
+        description: 'Homepage',
+      },
+      {
+        src: '/static/images/kwix.png',
+        description: 'Homepage',
+      },
+      {
+        src: '/static/images/kwix.png',
+        description: 'Homepage',
+      },
+    ],
   },
 ]
 

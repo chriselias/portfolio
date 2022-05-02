@@ -1,11 +1,11 @@
 import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
-import { useRouter } from 'next/router'
 import SectionContainer from '@/components/SectionContainer'
 import Image from '@/components/Image'
 import StackIcons from '@/components/StackIcons'
+import Link from '@/components/Link'
+import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 
 export const getStaticPaths = async () => {
   const p = projectsData.map(({ slug }) => ({ params: { slug } }))
@@ -24,44 +24,63 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function Project({ project }) {
-  const { title, description, imgSrc, href, stack, excerpt, colors } = project[0]
+  const { title, description, imgSrc, href, stack, excerpt, colors, screenshots } = project[0]
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div style={{ backgroundColor: colors.background }}>
+      <div
+        style={{ backgroundColor: colors.background, borderBottom: `10px solid ${colors.primary}` }}
+      >
         <SectionContainer>
-          <div className="grid lg:grid-cols-2">
+          <div className="grid py-12 lg:grid-cols-2">
             <div className="flex items-center">
               <div className="p-8 md:px-8">
-                <h1
+                <Link href="/projects">
+                  <button className="mb-8 flex items-center text-sm font-bold uppercase hover:text-blue-700">
+                    <MdOutlineKeyboardBackspace className="mr-2" /> All Projects
+                  </button>
+                </Link>
+
+                {/* <h1
                   style={{ color: colors.primary }}
-                  className="mb-5 text-3xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+                  className="mb-2 text-xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-4xl sm:leading-10  md:leading-14"
                 >
                   {title}
-                </h1>
-                <p> {excerpt}</p>
+                </h1> */}
+                <img src={imgSrc} alt="" className="mt-4 mb-8 max-w-xs" />
+                <p className="max-w-lg"> {description}</p>
               </div>
             </div>
-            <div className="p-8">
-              <Image src={imgSrc} alt={title} width={507} height={370} />
+            <div className="mt-8">
+              <p className="mb-8 text-sm font-bold uppercase">Built With </p>
+              <div className="mt-4 grid grid-cols-2 gap-6">
+                {stack.map((stack) => (
+                  <div className="flex" key={stack}>
+                    <StackIcons stack={stack} color={colors.primary} />
+                    {stack}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </SectionContainer>
       </div>
-      <div className="h-24" style={{ backgroundColor: colors.primary }}>
+      {/* <div className="h-24" style={{ backgroundColor: colors.primary }}>
         <div className="ml-8 flex p-8">
           <StackIcons stack={stack} />
         </div>
-      </div>
+      </div> */}
       <SectionContainer>
-        <div className="grid min-h-screen lg:grid-cols-2">
-          <div className="p-8">
-            <h2 className="text-lg font-semibold">About {title}</h2>
-            <p>{description}</p>
-          </div>
-          <div className="p-8">
-            <Image className="rounded" src={imgSrc} alt={title} width={500} height={300} />
-          </div>
+        <div className="grid gap-8 py-12 lg:grid-cols-3">
+          {screenshots.map((screenshot) => (
+            <Image
+              src={screenshot.src}
+              alt={screenshot.description}
+              key={screenshot.src}
+              width={507}
+              height={370}
+            />
+          ))}
         </div>
       </SectionContainer>
 

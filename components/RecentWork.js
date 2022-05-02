@@ -17,19 +17,24 @@ export default function RecentWorkImages({ numOfProjects }) {
               <Link href={project.href} aria-label={`Link to ${project.title}`}>
                 <li key={project.slug} className="relative">
                   <>
-                    <div className="aspect-w-10 aspect-h-7 group block w-full overflow-hidden rounded-lg bg-gray-100 ">
+                    <div
+                      className="aspect-w-10 aspect-h-7 group flex h-96 items-center justify-center overflow-hidden rounded-lg shadow-lg"
+                      style={{ backgroundColor: project.colors.background }}
+                    >
                       <img
                         src={project.imgSrc}
                         alt=""
                         className="object-cover group-hover:opacity-75"
+                        width="80%"
                       />
+
                       <button type="button" className="absolute inset-0 focus:outline-none">
                         <span className="sr-only">View details for {project.title}</span>
                       </button>
                     </div>
                     <div className="mt-6  px-2">
                       <p className="font-bold">{project.title}</p>
-                      <p className="text-sm">{project.excerpt}</p>
+                      <p className="text-sm text-gray-600">{project.excerpt}</p>
                       {/* <div className="flex flex-row flex-wrap py-4">
                         <StackIcons stack={project.stack} />
                       </div> */}

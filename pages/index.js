@@ -1,11 +1,8 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
 
-import NewsletterForm from '@/components/NewsletterForm'
 import SectionContainer from '@/components/SectionContainer'
 import Hero from '@/components/Hero'
 import RecentWorkImages from '@/components/RecentWork'
@@ -28,8 +25,8 @@ export default function Home({ posts }) {
           <SectionContainer>
             <div className="grid gap-12 py-24 lg:grid-cols-2">
               <div>
-                <h2 className="mb-2 text-4xl font-bold">An Experienced Dev</h2>
-                <p>
+                <h2 className="mb-2 text-4xl font-bold">An Experienced Tech Leader</h2>
+                <p className="text-gray-600">
                   With many years of experience under my belt, I've worked with many front end and
                   back end languages. I have managed both dev and design teams and have been a
                   leader helping grow small companies to large.
@@ -38,21 +35,21 @@ export default function Home({ posts }) {
               <div className="grid md:grid-cols-3 lg:grid-cols-1">
                 <div className="mb-10">
                   <h3 className="text-lg font-bold">Front-End</h3>
-                  <p>
+                  <p className="text-gray-600">
                     Currently coding with React, Next.js, and TypeScript. I love these modern JS
                     libaries but I have years of experience with CSS, HTML, and Angular.
                   </p>
                 </div>
                 <div className="mb-10">
                   <h3 className="text-lg font-bold">Back End</h3>
-                  <p>
+                  <p className="text-gray-600">
                     Experience with NodeJS, ExpressJS, PosgresSQL, MongoDB, and more. I enjoy
                     writing APIs from scratch and integrating them the front-end.
                   </p>
                 </div>
                 <div className="">
                   <h3 className="text-lg font-bold">UI Design</h3>
-                  <p>
+                  <p className="text-gray-600">
                     Designing in Figma or Sketch and then translating into code is one of favorite
                     parts of being a full stack developer.
                   </p>
@@ -63,17 +60,22 @@ export default function Home({ posts }) {
         </div>
         <SectionContainer>
           <div className="mt-24 text-center">
-            <h2 className="my-8 text-4xl font-bold">Recent Work</h2>
+            <h2 className="my-4 text-4xl font-bold">Recent Work</h2>
+            <p className="text-lg text-gray-600">Some samples of recent coding and design work.</p>
           </div>
-          <RecentWorkImages numOfProjects={3} />
+          <div className="my-12">
+            <RecentWorkImages numOfProjects={3} />
+          </div>
         </SectionContainer>
         <div className="flex justify-center">
-          <button
-            type="button"
-            className="hover:border-color-black inline-flex items-center rounded-md border-2 bg-black px-3 py-2 text-sm font-medium leading-4 text-white hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            See More Projects
-          </button>
+          <Link href="/projects" className="text-lg font-bold">
+            <button
+              type="button"
+              className="inline-flex items-center rounded-md border-2 border-black bg-black px-8 py-3 text-sm font-medium leading-4 text-white hover:bg-white hover:text-black"
+            >
+              See More Projects
+            </button>
+          </Link>
         </div>
       </div>
       {/* {posts.length > MAX_DISPLAY && (
