@@ -47,7 +47,10 @@ export default function Project({ project }) {
                 >
                   {title}
                 </h1> */}
-                <img src={imgSrc} alt="" className="mt-4 mb-8 max-w-xs" />
+                <div className="relative mt-4 mb-8 h-12">
+                  <Image src={imgSrc} alt={title} layout="fill" objectFit="contain" />
+                </div>
+                {/* <img src={imgSrc} alt="" className="mt-4 mb-8 max-w-xs" /> */}
                 <p className="max-w-lg"> {description}</p>
               </div>
             </div>
