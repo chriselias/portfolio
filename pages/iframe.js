@@ -14,7 +14,7 @@ export default function Page() {
         width={1000}
         height={1000}
       >
-        <p>Your browser does not support iframes.</p>
+        <p>Your browser does not support iframes..</p>
       </iframe>
     </>
   )
